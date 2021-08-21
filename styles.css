@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  -very-dark-cyan: #00494d;
+  -dark-grayish-cyan: #5e7a7d;
+  -dark-grayish-cyan-1: #7f9c9f;
+  -light-grayish-cyan: #c5e4e7;
+  -light-grayish-cyan-1: #f4fafa;
+  -white: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* font-family: 'Space Mono', monospace; */
