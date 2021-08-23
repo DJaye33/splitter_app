@@ -10,17 +10,35 @@
 }
 
 :root {
-  -very-dark-cyan: #00494d;
-  -dark-grayish-cyan: #5e7a7d;
-  -dark-grayish-cyan-1: #7f9c9f;
-  -light-grayish-cyan: #c5e4e7;
-  -light-grayish-cyan-1: #f4fafa;
-  -white: #ffffff;
+  --very-dark-cyan: #00494d;
+  --dark-grayish-cyan: #5e7a7d;
+  --dark-grayish-cyan-1: #7f9c9f;
+  --light-grayish-cyan: #c5e4e7;
+  --light-grayish-cyan-1: #f4fafa;
+  --white: #ffffff;
 }
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--light-grayish-cyan);
+}
+
+header {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+#title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 3.2rem;
+  color: var(--very-dark-cyan);
 }
 
 /* font-family: 'Space Mono', monospace; */
