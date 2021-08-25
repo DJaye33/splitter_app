@@ -230,3 +230,47 @@ input[type="number"] {
 .reset:active {
   transform: translateY(0.5rem);
 }
+
+/* Media Queries */
+@media only screen and (min-width: 920px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2.5rem;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .bill-container {
+    width: 37.9rem;
+  }
+
+  .percent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .custom {
+    padding-right: initial;
+    text-align: center;
+  }
+
+  .tip {
+    padding: 4rem;
+    width: 41.3rem;
+  }
+
+  .tip-amount {
+    margin-bottom: 4.1rem;
+  }
+
+  .total {
+    margin-bottom: 13rem;
+  }
+}
+
+/* .main {
+  background-color: var(--white);
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+  padding: 3.2rem;
+} */
