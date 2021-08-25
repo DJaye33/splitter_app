@@ -95,6 +95,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.inputs:focus {
+  border: 2px solid var(--cyan);
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--dark-grayish-cyan-1);
@@ -263,8 +267,8 @@ input[type="number"] {
   }
 
   .custom {
-    padding-right: initial;
-    text-align: center;
+    padding-right: 1.5rem;
+    text-align: right;
   }
 
   .tip {
