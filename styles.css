@@ -241,6 +241,11 @@ input[type="number"] {
 }
 
 @media only screen and (min-width: 920px) {
+  .heading {
+    margin-top: 16.3rem;
+    margin-bottom: 8.7rem;
+  }
+
   .main {
     display: flex;
     justify-content: space-between;
@@ -275,10 +280,3 @@ input[type="number"] {
     margin-bottom: 13rem;
   }
 }
-
-/* .main {
-  background-color: var(--white);
-  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
-  border-radius: 2.5rem 2.5rem 0rem 0rem;
-  padding: 3.2rem;
-} */
