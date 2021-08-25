@@ -47,12 +47,11 @@ header {
   box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
   border-radius: 2.5rem 2.5rem 0rem 0rem;
   padding: 3.2rem;
-  border: 2px dotted red;
 }
 
 .bill {
   margin-bottom: 3.2rem;
-  border: 2px dotted gold;
+  /* border: 2px dotted gold; */
 }
 
 .title {
@@ -82,7 +81,6 @@ header {
   border: none;
   outline: transparent;
   background-color: var(--light-grayish-cyan-1);
-  border: 2px solid maroon;
 }
 
 /* Hide number input arrows */
@@ -113,7 +111,6 @@ input[type="number"] {
 
 .selection {
   width: 100%;
-  border: 2px dotted purple;
 }
 
 .select-tip {
@@ -124,19 +121,20 @@ input[type="number"] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.6rem;
-  border: 2px dotted green;
+  margin-bottom: 3.2rem;
 }
 
 .btn {
+  cursor: pointer;
   font-family: inherit;
   font-weight: bold;
   border: none;
   outline: transparent;
   border-radius: 0.5rem;
+  transition: all 0.2s ease-out;
 }
 
 .btn:hover {
-  cursor: pointer;
   background-color: var(--cyan);
   color: var(--very-dark-cyan);
 }
@@ -147,4 +145,77 @@ input[type="number"] {
   background-color: var(--very-dark-cyan);
   color: var(--white);
   padding: 0.6rem 1.6rem;
+}
+
+.custom {
+  font-family: inherit;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: var(--very-dark-cyan);
+  border: none;
+  outline: transparent;
+  background-color: var(--light-grayish-cyan-1);
+  width: 100%;
+  padding-right: 1.7rem;
+}
+
+.number {
+  margin-bottom: 3.2rem;
+}
+
+.tip {
+  background-color: var(--very-dark-cyan);
+  border-radius: 1.5rem;
+  padding: 2.4rem;
+}
+
+.tip-amount,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person-tip {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--white);
+}
+
+.person {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  color: var(--dark-grayish-cyan-1);
+}
+
+.tip-amount {
+  margin-bottom: 2rem;
+}
+
+.amount,
+.amount-total {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4.7rem;
+  letter-spacing: -0.067rem;
+  color: var(--cyan);
+}
+
+.total {
+  margin-bottom: 3.2rem;
+}
+
+.reset {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--very-dark-cyan);
+  background-color: var(--cyan);
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0.9rem 3.3rem;
 }
