@@ -11,12 +11,12 @@
 
 :root {
   --cyan: #26c2ae;
+  --light-cyan: #9fe8df;
   --very-dark-cyan: #00494d;
   --dark-grayish-cyan: #5e7a7d;
   --dark-grayish-cyan-1: #7f9c9f;
   --light-grayish-cyan: #c5e4e7;
   --light-grayish-cyan-1: #f4fafa;
-  --reset-background-hover: #9fe8df;
   --white: #ffffff;
 }
 
@@ -52,7 +52,6 @@ header {
 
 .bill {
   margin-bottom: 3.2rem;
-  /* border: 2px dotted gold; */
 }
 
 .title {
@@ -95,7 +94,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.inputs:focus {
+.inputs:focus-within {
   border: 2px solid var(--cyan);
 }
 
@@ -164,6 +163,11 @@ input[type="number"] {
   background-color: var(--light-grayish-cyan-1);
   width: 100%;
   padding-right: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+.custom:focus-within {
+  border: 2px solid var(--cyan);
 }
 
 .number {
@@ -228,7 +232,7 @@ input[type="number"] {
 }
 
 .reset:hover {
-  background-color: var(--reset-background-hover);
+  background-color: var(--light-cyan);
 }
 
 .reset:active {
