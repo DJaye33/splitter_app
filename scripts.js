@@ -4,6 +4,7 @@ const nPeople = document.querySelector(".people-input");
 const tipAmount = document.querySelector(".amount");
 const custom = document.querySelector(".custom");
 const total = document.querySelector(".amount-total");
+const reset = document.querySelector(".reset");
 
 let bill;
 let tip;
@@ -55,4 +56,16 @@ nPeople.addEventListener("input", () => {
   numPeople = +nPeople.value;
   amountOfTip();
   console.log(numPeople);
+});
+
+reset.addEventListener("click", () => {
+  billInput.value = "";
+  nPeople.value = "";
+  custom.value = "";
+  bill = undefined;
+  tip = undefined;
+  numPeople = undefined;
+  checkActive();
+  tipAmount.textContent = "0.00";
+  total.textContent = "0.00";
 });
