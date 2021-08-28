@@ -43,6 +43,7 @@ const checkValues = () => {
 const showHideError = (firstEl, secondEl, errorClass) => {
   if (firstEl.value === "0") {
     errorClass.classList.remove("hidden");
+    errorClass.textContent = "Can't be zero"
     secondEl.style.border = "2px solid var(--error)";
   } else {
     errorClass.classList.add("hidden");
@@ -97,4 +98,8 @@ reset.addEventListener("click", () => {
   checkActive();
   tipAmount.textContent = "0.00";
   total.textContent = "0.00";
+  error.textContent = "";
+  inputsBill.style.border = "2px solid transparent";
+  numError.textContent = "";
+  number.style.border = "2px solid transparent";
 });
