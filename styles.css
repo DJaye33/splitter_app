@@ -18,6 +18,7 @@
   --light-grayish-cyan: #c5e4e7;
   --light-grayish-cyan-1: #f4fafa;
   --white: #ffffff;
+  --error: #e17457;
 }
 
 html {
@@ -152,9 +153,30 @@ input[type="number"] {
   padding: 0.6rem 1.6rem;
 }
 
+.numPeople {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .active {
   color: var(--very-dark-cyan);
   background-color: var(--light-cyan);
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--error);
+}
+
+.borderGreen {
+  border: 2px solid var(--cyan);
 }
 
 .custom {

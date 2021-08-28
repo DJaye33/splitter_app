@@ -5,6 +5,9 @@ const tipAmount = document.querySelector(".amount");
 const custom = document.querySelector(".custom");
 const total = document.querySelector(".amount-total");
 const reset = document.querySelector(".reset");
+const error = document.querySelector(".error");
+const number = document.querySelector(".number");
+const inputs = document.querySelector(".inputs");
 
 let bill;
 let tip;
@@ -32,6 +35,11 @@ const amountOfTip = () => {
 billInput.addEventListener("input", () => {
   bill = +billInput.value;
   amountOfTip();
+  if (billInput.value === "0") {
+    inputs.style.border = "2px solid var(--error)";
+  } else {
+    inputs.style.border = ""
+  }
   console.log(bill);
 });
 
@@ -55,6 +63,15 @@ tipPercent.forEach((percent) => {
 nPeople.addEventListener("input", () => {
   numPeople = +nPeople.value;
   amountOfTip();
+  // check if value is 0
+  if (nPeople.value === "0") {
+    error.classList.remove("hidden");
+    number.style.border = "2px solid var(--error)";
+  } else {
+    error.classList.add("hidden");
+    number.style.border = ""
+  }
+
   console.log(numPeople);
 });
 
