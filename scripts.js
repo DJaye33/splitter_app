@@ -32,24 +32,34 @@ const amountOfTip = () => {
   }
 };
 
+const checkValues = () => {
+  if (!amountOfTip()) {
+    tipAmount.textContent = "0.00";
+    total.textContent = "0.00";
+  }
+};
+
 billInput.addEventListener("input", () => {
   bill = +billInput.value;
+  checkValues();
   amountOfTip();
   if (billInput.value === "0") {
     inputs.style.border = "2px solid var(--error)";
   } else {
-    inputs.style.border = ""
+    inputs.style.border = "";
   }
   console.log(bill);
 });
 
 custom.addEventListener("input", () => {
   tip = +custom.value;
+  checkValues();
   checkActive();
+  amountOfTip();
   if (custom.value === "0") {
     custom.style.border = "2px solid var(--error)";
   } else {
-    custom.style.border = ""
+    custom.style.border = "";
   }
   console.log(tip);
 });
@@ -57,6 +67,7 @@ custom.addEventListener("input", () => {
 tipPercent.forEach((percent) => {
   percent.addEventListener("click", (event) => {
     tip = +parseInt(event.currentTarget.textContent, 10);
+    checkValues();
     checkActive();
     amountOfTip();
     event.currentTarget.classList.toggle("active");
@@ -67,6 +78,7 @@ tipPercent.forEach((percent) => {
 
 nPeople.addEventListener("input", () => {
   numPeople = +nPeople.value;
+  checkValues();
   amountOfTip();
   // check if value is 0
   if (nPeople.value === "0") {
@@ -74,7 +86,7 @@ nPeople.addEventListener("input", () => {
     number.style.border = "2px solid var(--error)";
   } else {
     error.classList.add("hidden");
-    number.style.border = ""
+    number.style.border = "";
   }
 
   console.log(numPeople);
