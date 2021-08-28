@@ -27,8 +27,11 @@
     <main class="main">
       <section class="bill-container">
         <div class="bill">
-          <h2 class="title">Bill</h2>
-          <div class="inputs">
+          <div class="input-bill">
+            <h2 class="title">Bill</h2>
+            <span class="error hidden">Can't be zero</span>
+          </div>
+          <div class="inputs inputs-bill">
             <img src="/images/icon-dollar.svg" alt="dollar sign" />
             <label for="bill"></label>
             <input
@@ -54,7 +57,7 @@
         <div class="bill">
           <div class="numPeople">
             <h2 class="title">Number of People</h2>
-            <span class="error hidden">Can't be zero</span>
+            <span class="num-error hidden">Can't be zero</span>
           </div>
           <div class="inputs number">
             <img src="/images/icon-person.svg" alt="person icon" />

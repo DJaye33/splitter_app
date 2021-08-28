@@ -6,8 +6,10 @@ const custom = document.querySelector(".custom");
 const total = document.querySelector(".amount-total");
 const reset = document.querySelector(".reset");
 const error = document.querySelector(".error");
+const numError = document.querySelector(".num-error");
 const number = document.querySelector(".number");
 const inputs = document.querySelector(".inputs");
+const inputsBill = document.querySelector(".inputs-bill");
 
 let bill;
 let tip;
@@ -26,7 +28,6 @@ const amountOfTip = () => {
     const totalPerPerson = bill / numPeople + perPerson;
     tipAmount.textContent = perPerson.toFixed(2);
     total.textContent = totalPerPerson.toFixed(2);
-    console.log(amount);
   } else {
     return;
   }
@@ -39,16 +40,21 @@ const checkValues = () => {
   }
 };
 
+const showHideError = (firstEl, secondEl, errorClass) => {
+  if (firstEl.value === "0") {
+    errorClass.classList.remove("hidden");
+    secondEl.style.border = "2px solid var(--error)";
+  } else {
+    errorClass.classList.add("hidden");
+    secondEl.style.border = "";
+  }
+};
+
 billInput.addEventListener("input", () => {
   bill = +billInput.value;
   checkValues();
   amountOfTip();
-  if (billInput.value === "0") {
-    inputs.style.border = "2px solid var(--error)";
-  } else {
-    inputs.style.border = "";
-  }
-  console.log(bill);
+  showHideError(billInput, inputsBill, error);
 });
 
 custom.addEventListener("input", () => {
@@ -61,7 +67,6 @@ custom.addEventListener("input", () => {
   } else {
     custom.style.border = "";
   }
-  console.log(tip);
 });
 
 tipPercent.forEach((percent) => {
@@ -72,7 +77,6 @@ tipPercent.forEach((percent) => {
     amountOfTip();
     event.currentTarget.classList.toggle("active");
     custom.value = "";
-    console.log(tip);
   });
 });
 
@@ -80,16 +84,7 @@ nPeople.addEventListener("input", () => {
   numPeople = +nPeople.value;
   checkValues();
   amountOfTip();
-  // check if value is 0
-  if (nPeople.value === "0") {
-    error.classList.remove("hidden");
-    number.style.border = "2px solid var(--error)";
-  } else {
-    error.classList.add("hidden");
-    number.style.border = "";
-  }
-
-  console.log(numPeople);
+  showHideError(nPeople, number, numError);
 });
 
 reset.addEventListener("click", () => {
