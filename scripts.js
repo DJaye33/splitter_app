@@ -46,6 +46,11 @@ billInput.addEventListener("input", () => {
 custom.addEventListener("input", () => {
   tip = +custom.value;
   checkActive();
+  if (custom.value === "0") {
+    custom.style.border = "2px solid var(--error)";
+  } else {
+    custom.style.border = ""
+  }
   console.log(tip);
 });
 
