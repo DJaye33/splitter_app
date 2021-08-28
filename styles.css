@@ -31,17 +31,28 @@ body {
   background-color: var(--light-grayish-cyan);
 }
 
-header {
+.header-container {
   margin-top: 5rem;
   margin-bottom: 4rem;
 }
 
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  }
+
 .heading {
-  text-align: center;
+  margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-size: 3.2rem;
   color: var(--very-dark-cyan);
+  width: 14rem;
+  word-break: break-all;
 }
 
 .main {

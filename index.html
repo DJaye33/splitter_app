@@ -21,19 +21,19 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <header>
-      <h1 class="heading">Spli<br />tter</h1>
+    <header class="header-container">
+      <h1 class="heading">Splitter</h1>
     </header>
     <main class="main">
       <section class="bill-container">
         <div class="bill">
           <div class="input-bill">
-            <h2 class="title sr-only">Enter bill amount</h2>
+            <h2 class="title">bill</h2>
             <span class="error hidden"></span>
           </div>
           <div class="inputs inputs-bill">
             <img src="/images/icon-dollar.svg" alt="" />
-            <label for="bill" sr-only></label>
+            <label class="sr-only" for="bill"">Enter bill amount</label>
             <input
               type="number"
               id="bill"
@@ -61,7 +61,7 @@
           </div>
           <div class="inputs number">
             <img src="/images/icon-person.svg" alt="" />
-            <label for="people"></label>
+            <label class="sr-only" for="people">Enter number of people</label>
             <input
               type="number"
               id="people"
@@ -73,20 +73,20 @@
         </div>
       </section>
       <section class="tip">
-        <div class="tip-amount">
+        <header class="tip-amount">
           <div class="per-person">
             <p class="person-tip">Tip Amount</p>
             <p class="person">/ person</p>
           </div>
           <p class="amount">0.00</p>
-        </div>
-        <div class="total">
+        </header>
+        <header class="total">
           <div class="per-person">
             <p class="person-tip">Total</p>
             <p class="person">/ person</p>
           </div>
           <p class="amount-total">0.00</p>
-        </div>
+        </header>
         <button class="reset btn">Reset</button>
       </section>
     </main>
