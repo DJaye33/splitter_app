@@ -18,8 +18,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -52,7 +50,7 @@ Reset button will clear all inputs, text output, and deactive any border states;
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://splitter-app.vercel.app)
+- Live Site URL: [live hosted site of application](https://splitter-app.vercel.app)
 
 ## My process
 
@@ -98,8 +96,8 @@ I realized in this project that I will need t spend more time upgrading my debug
 
 ## Author
 
-  Danny JeanLouis 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/djaye33)
+  Danny JeanLouis - [linkedIn - personal site in progess](https://www.linkedin.com/in/danny-jeanlouis-3830a9213/)
+- Frontend Mentor - [profile on frontend mentors](https://www.frontendmentor.io/profile/djaye33)
 
 ## Acknowledgments
 
