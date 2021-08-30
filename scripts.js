@@ -41,6 +41,15 @@ const checkValues = () => {
 };
 
 const showHideError = (firstEl, secondEl, errorClass) => {
+  // prevents multiple 0's
+  if (
+    firstEl.value.length > 0 &&
+    firstEl.value[0] === "0" &&
+    !firstEl.value.includes(".")
+  ) {
+    firstEl.value = "0";
+  }
+
   if (firstEl.value === "0") {
     errorClass.classList.remove("hidden");
     errorClass.textContent = "Can't be zero";
@@ -63,6 +72,14 @@ custom.addEventListener("input", () => {
   checkValues();
   checkActive();
   amountOfTip();
+  if (
+    custom.value.length > 0 &&
+    custom.value[0] === "0" &&
+    !custom.value.includes(".")
+  ) {
+    custom.value = "0";
+  }
+
   if (custom.value === "0") {
     custom.style.border = "2px solid var(--error)";
   } else {
